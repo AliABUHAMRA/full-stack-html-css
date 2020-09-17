@@ -1,0 +1,350 @@
+/*-------------------١--------------------------*/
+/*                  ملحوظات                     */
+/*
+ملحوظة عامة:لقد  تركت لكم تعليقات لتساعدك علي تنظيم الملف بالشكل المثالي
+تأكد من أن آخر جزء هو الجزء الحاوي لكل ما هو متعلق بشكل الصفحة على الهواتف والتابلت
+إذا كان لديك أي سؤال من فضلك إرسل لي الكود وشرح المشكلة علي البريد الالكتروني
+tony@barmej.com
+*/
+/*----------------------------------------------*/
+
+/*----------------------١-----------------------*/
+/*
+Fonts & Font-faces سنقوم بوضع جميع الخطوط التي سنحتاجها هنا
+ملحوظة: إسم الخط هو إما
+Avenir Next 
+أو إن لم تجده فيمكنك استعمال خط 
+Lato
+*/
+/*---------------------------------------------*/
+
+
+/*----------------------٢-----------------------*/
+/*                  DEFAULTS                    */
+/*
+يجب عليك هنا وضع أي من الأنماط العامة الخاصة بوسوم مثل
+html, body, h1, h2, p 
+وهي الأنماط التي تنطبق على الموقع بشكل عام وكل صفحاته وليس على عنصر معين في صفحة معينة
+*/
+/*----------------------------------------------*/
+body{
+    font-family: lato;
+    margin: 0 auto;
+    width: 100%;
+}
+h2{
+    font-family: Avenir Next;
+    line-height: 33px;
+    color: #2B292D;
+}
+h4{
+    margin: 0;
+}
+h1{
+    font-family: Avenir Next;
+    font-size: 48px;
+    line-height: 66px;
+    text-transform: capitalize;
+    color: #2B292D;
+}
+p{
+    font-family: Avenir Next;
+    font-size: 16px;
+    line-height: 163.92%;
+    color: #000000;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+header li{
+    list-style-type: none;
+    margin-left: 20px;
+}
+/*----------------------٣-----------------------*/
+/*               HELPER CLASSES                 */
+/*
+يجب عليك هنا وضع أي من الأنماط الخاصة بال
+classes
+التي ستقوم بإعادة إستخدامها في أكثر من مكان خلال عملك على الموقع 
+على سبيل المثال: النمط الخاص بالزر الأزرق الذي يستعمله المصمم في كل الصفحات تقريباً
+*/
+/*----------------------------------------------*/
+.main-nav{
+    display: none;
+}
+a.button.is-primary{
+    text-align: center;
+    text-decoration: none;
+    background: blueviolet;
+    width: 182px;
+    height: 43px;
+    position: absolute;
+    border-radius: 48px;
+    color: wheat;
+    padding: 0px 12px;
+    padding-top: 20px;
+    font-size: larger
+}
+.meetYourMatchــcontent {
+    position: relative;
+    text-align: center;
+    padding-top: 40px;
+    z-index: 2;
+}
+.form-group{
+    width: 320px;
+    margin: auto;
+    display: flex;
+    position: relative;
+}
+form.meetYourMatchــform .button {
+    position: absolute;
+    right: 0;
+    background: #3040C4;
+    border-radius: 41px;
+    width: 8em;
+    height: 59px;
+    color: wheat;
+}
+.stories .widget a {
+    color: #2329db;
+    font-weight: 900;
+    text-decoration: none;
+}
+.widget__desc {
+    margin-bottom: 40px;
+}
+.item {
+    margin-left: 50px;
+}
+/*----------------------٤-----------------------*/
+/*                    LAYOUT                    */
+/*                البناء العام للصفحة           */
+/*----------------------------------------------*/
+/*----------------------٥-----------------------*/
+/*                    HEADER                    */
+/*----------------------------------------------*/
+header .container {
+    border-bottom: 1px solid #eef0fc;
+    align-items: center;
+    padding: 26px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.burger{
+    float: right;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #3333;
+    cursor: pointer;
+    padding: 5px;
+    background: none;
+    border: none;
+}
+.burger div{
+    width: 80%;
+    margin: 7px auto;
+    border: 2px solid #333333;
+}
+.burger:hover div:first-child {
+    transform: rotate(45deg) translate(4px, 3px);
+}
+.burger:hover div:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+.burger:hover div:nth-child(even) {
+    display: none;
+}
+
+/*----------------------٦-----------------------*/
+/*                     HERO                     */
+/*----------------------------------------------*/
+.hero__image img{
+    width: 100%;
+}
+/*----------------------٧-----------------------*/
+/*              MEET YOUR MATCH                 */
+/*----------------------------------------------*/
+.meetYourMatch__background {
+    background: #f6f6f9;
+    width: 100%;
+    height: 32em;
+    position: absolute;
+    z-index: -1;
+}
+input#dog,
+#cat {
+  display: none;
+}
+.switcher {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+input {
+  border: 1px solid #3040c4;
+  height: 56px;
+  width: 100%;
+  border-radius: 40px;
+  font-family: "AvenirNext-Regular", sans-serif;
+}
+.widgets.is-searchResults {
+    text-align: start;
+    padding-top: 10em;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.is-searchResults .widget__desc {
+    box-shadow: 0px 76px 172px rgba(205, 213, 228, 0.3);
+    padding: 20px;
+}
+.widgets img  {
+    width: 318px;
+    transition: all 1s;
+}
+.is-searchResults img:hover  {
+    transform: scale(1.1);
+}
+/*----------------------٨-----------------------*/
+/*               HOW IT WORKS                   */
+/*----------------------------------------------*/
+.howItWorks .container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/*----------------------٩-----------------------*/
+/*                 STORIES                      */
+/*----------------------------------------------*/
+.stories .container {
+    background-color: #f6f6f9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+section.stories p {
+    text-align: center;
+    font-family: Avenir Next;
+    font-size: 14px;
+    color: #5F5F80;
+}
+/*----------------------١٠----------------------*/
+/*       Actions: Change A Life, Adopt A Pet    */
+/*----------------------------------------------*/
+.actions .container {
+    background-color: #3040c4;
+    height: 10em;
+    text-align: center;
+    color: #ffffff;
+    padding: 47px 0;
+}
+a.button.is-secondary {
+    width: 150px;
+    background: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+    padding: 14px 40px;
+    border-radius: 41px;
+}
+  a.button.is-outline {
+    width: 150px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    padding: 14px 40px;
+    border-radius: 41px;
+    color: #fff;
+}
+  .actions .container h2 {
+    font-size: 24px;
+    line-height: 33px;
+    align-items: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin-bottom: 34px;
+}
+/*---------------------١١-----------------------*/
+/*                    FOOTER                    */
+/*----------------------------------------------*/
+.copyrights{
+    margin: 20px;
+}
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-nav ul li a {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/*----------------------١٢----------------------*/
+/*                    Responsive                */
+/*       كل ما هو متعلق بالهواتف والتابلت       */
+/*----------------------------------------------*/
+@media (min-width: 768px) and (max-width: 1024px){
+    .main-nav{
+        display: block;
+    }
+    .main-nav ul{
+        display: flex;
+    }
+    .burger{
+        display: none;
+    }
+    section.hero .container {
+        display: flex;
+    }
+    section.stories .widgets {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    section.stories .widget {
+        margin:auto ;
+    }
+}
+/*for Deskop*/
+@media only screen and (min-width: 1020px){
+    .main-nav{
+        display: block;
+    }
+    .main-nav ul{
+        display: flex;
+    }
+    .burger{
+        display: none;
+    }
+    section.hero .container {
+        display: flex;
+    }
+    
+    .is-searchResults.widgets{
+        flex-flow: nowrap;
+    }
+    .is-searchResults .widget{
+        margin-left: 20px;
+    }
+    .stories .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    section.stories .widget {
+        display: inline-table;
+        margin: 13px;
+    }
+    .actions .container h2{
+        font-size: 33px;
+    }
+    footer .container {
+        display: flex;
+        justify-content: space-around;
+    }
+}
